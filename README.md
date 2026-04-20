@@ -10,9 +10,14 @@
 
 本仓库包含四个 skill，分为两类：
 
-#### 产品方法论（product-methodology）
+| 类别 | Skills | 适用范围 |
+|------|--------|----------|
+| 产品方法论 | PRINCIPLES / SOP / REVIEW | 通用，适用于任何产品 |
+| 方案审查 | /review-plan | 专门针对海外版产品方案 |
 
-一套完整的产品方法论体系，三个文档各司其职、互相引用：
+#### 产品方法论（product-methodology） — 通用
+
+一套完整的产品方法论体系，三个文档各司其职、互相引用，适用于任何产品方向：
 
 | 文件 | 用途 | 说明 |
 |------|------|------|
@@ -27,9 +32,9 @@
 - **做 demo 前**：把 `REVIEW.md` 喂给 Claude Code 当生成约束
 - **做完后**：用 `REVIEW.md` 逐层自检验收
 
-#### /review-plan
+#### /review-plan — 海外版专用
 
-一个用于审查 AI 产品方案的 Claude Code skill。从**创新性**、**海外市场适配性**、**方案完整性**三个维度逐项检查，给出具体问题和可操作的改进建议。
+一个专门针对**海外版产品方案**的 Claude Code skill。从**创新性**、**海外市场适配性**、**方案完整性**三个维度逐项检查，给出具体问题和可操作的改进建议。
 
 **适合谁用：**
 - 需要自主审查方案、没有 mentor review 的场景
@@ -87,9 +92,14 @@ cp -r product-methodology .claude/skills/
 
 This repo contains four skills in two categories:
 
-#### Product Methodology
+| Category | Skills | Scope |
+|----------|--------|-------|
+| Product Methodology | PRINCIPLES / SOP / REVIEW | Universal, applicable to any product |
+| Plan Review | /review-plan | Specifically for overseas product plans |
 
-A complete product methodology system — three docs, each with a clear role, cross-referencing each other:
+#### Product Methodology — Universal
+
+A complete product methodology system — three docs, each with a clear role, cross-referencing each other. Applicable to any product direction:
 
 | File | Purpose | Description |
 |------|---------|-------------|
@@ -104,9 +114,9 @@ A complete product methodology system — three docs, each with a clear role, cr
 - **Before building a demo**: Feed `REVIEW.md` to Claude Code as generation constraints
 - **After building**: Self-review against `REVIEW.md` layer by layer
 
-#### /review-plan
+#### /review-plan — Overseas-specific
 
-A Claude Code skill for reviewing AI product plans. It checks your plan from three dimensions: **innovation**, **overseas market fit**, and **completeness**, then provides specific issues and actionable suggestions.
+A Claude Code skill specifically designed for reviewing **overseas product plans**. It checks your plan from three dimensions: **innovation**, **overseas market fit**, and **completeness**, then provides specific issues and actionable suggestions.
 
 **Who is this for:**
 - PMs who need to self-review plans without a mentor
