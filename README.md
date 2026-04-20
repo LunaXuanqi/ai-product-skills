@@ -8,6 +8,25 @@
 
 ### Skills 列表
 
+本仓库包含四个 skill，分为两类：
+
+#### 产品方法论（product-methodology）
+
+一套完整的产品方法论体系，三个文档各司其职、互相引用：
+
+| 文件 | 用途 | 说明 |
+|------|------|------|
+| `PRINCIPLES.md` | 产品原则 | 从用户四个本质（懒、急、挑、晒）推导出 8 条原则 + 元原则"非必要勿增实体" |
+| `SOP.md` | 产品方案 SOP | 从想法到可执行方案的四步流程：压想法 → Demo/PRD → 瘦身 → 边界梳理 |
+| `REVIEW.md` | UI/体验 Review 清单 | 五层 checklist（心智层、感知层、交互层、流程层、容错层），做 demo 前当生成约束，做完后当验收 gate |
+
+**使用方式：**
+
+- **做方案前**：读 `PRINCIPLES.md`，用原则校准方向
+- **做方案时**：按 `SOP.md` 四步流程推进
+- **做 demo 前**：把 `REVIEW.md` 喂给 Claude Code 当生成约束
+- **做完后**：用 `REVIEW.md` 逐层自检验收
+
 #### /review-plan
 
 一个用于审查 AI 产品方案的 Claude Code skill。从**创新性**、**海外市场适配性**、**方案完整性**三个维度逐项检查，给出具体问题和可操作的改进建议。
@@ -42,14 +61,16 @@
 ```bash
 # 个人使用（所有项目通用）
 cp -r review-plan ~/.claude/skills/
+cp -r product-methodology ~/.claude/skills/
 
 # 仅限当前项目
 cp -r review-plan .claude/skills/
+cp -r product-methodology .claude/skills/
 ```
 
 ### 自定义
 
-`SKILL.md` 中有一个"产品背景信息"区域，预留了占位符。填入你自己的产品背景信息，可以获得更有针对性的审查：
+`review-plan/SKILL.md` 中有一个"产品背景信息"区域，预留了占位符。填入你自己的产品背景信息，可以获得更有针对性的审查：
 
 - 产品定位
 - 目标市场和用户画像
@@ -63,6 +84,25 @@ cp -r review-plan .claude/skills/
 ## English
 
 ### Skills
+
+This repo contains four skills in two categories:
+
+#### Product Methodology
+
+A complete product methodology system — three docs, each with a clear role, cross-referencing each other:
+
+| File | Purpose | Description |
+|------|---------|-------------|
+| `PRINCIPLES.md` | Product principles | 8 principles derived from four user truths (lazy, impatient, picky, sharing) + meta-principle "don't add what you don't need" |
+| `SOP.md` | Product plan SOP | Four-step process from idea to execution: compress idea → demo/PRD → trim → boundary check |
+| `REVIEW.md` | UI/UX review checklist | Five-layer checklist (mental model, perception, interaction, flow, error recovery) — use as generation constraints before building, validation gate after |
+
+**How to use:**
+
+- **Before planning**: Read `PRINCIPLES.md` to calibrate direction
+- **While planning**: Follow the four-step process in `SOP.md`
+- **Before building a demo**: Feed `REVIEW.md` to Claude Code as generation constraints
+- **After building**: Self-review against `REVIEW.md` layer by layer
 
 #### /review-plan
 
@@ -98,14 +138,16 @@ Copy the skill folder to your Claude Code skills directory:
 ```bash
 # Personal use (all projects)
 cp -r review-plan ~/.claude/skills/
+cp -r product-methodology ~/.claude/skills/
 
 # Project-specific only
 cp -r review-plan .claude/skills/
+cp -r product-methodology .claude/skills/
 ```
 
 ### Customize
 
-The `SKILL.md` file contains a "Product background" section with placeholders. Fill in your own product context for more targeted reviews:
+The `review-plan/SKILL.md` file contains a "Product background" section with placeholders. Fill in your own product context for more targeted reviews:
 
 - Product positioning
 - Target market and user personas
