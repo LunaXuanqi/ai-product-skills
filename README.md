@@ -8,12 +8,13 @@
 
 ### Skills 列表
 
-本仓库包含四个 skill，分为两类：
+本仓库包含五个 skill，分为三类：
 
 | 类别 | Skills | 适用范围 |
 |------|--------|----------|
 | 产品方法论 | PRINCIPLES / SOP / REVIEW | 通用，适用于任何产品 |
 | 方案审查 | /review-plan | 专门针对海外版产品方案 |
+| 实习经历沉淀 | intern-experience | 产品经理实习生，整理工作记录为简历项目经历 |
 
 #### 产品方法论（product-methodology） — 通用
 
@@ -31,6 +32,21 @@
 - **做方案时**：按 `SOP.md` 四步流程推进
 - **做 demo 前**：把 `REVIEW.md` 喂给 Claude Code 当生成约束
 - **做完后**：用 `REVIEW.md` 逐层自检验收
+
+#### intern-experience — 产品经理实习生专用
+
+将实习期间散落各处的工作记录（飞书待办、方案文档、会议纪要、OKR 等），整理为**可写进简历的项目经历**。
+
+**核心能力：**
+- 从琐碎记录中提取关键事实（做了什么、方法、产出、量化结果）
+- 按项目维度结构化梳理
+- 输出 STAR 格式（Situation-Task-Action-Result）简历文本
+- 内置面试官视角质量检查：分量感、专业度、结果可信度
+
+**三种使用场景：**
+- **日常积累**：每 1-2 周整理一次，避免最后想不起来做了什么
+- **阶段性整理**：实习结束前，一次性整理所有记录
+- **面试准备**：针对目标岗位优化 STAR 描述
 
 #### /review-plan — 海外版专用
 
@@ -67,10 +83,12 @@
 # 个人使用（所有项目通用）
 cp -r review-plan ~/.claude/skills/
 cp -r product-methodology ~/.claude/skills/
+cp -r intern-experience ~/.claude/skills/
 
 # 仅限当前项目
 cp -r review-plan .claude/skills/
 cp -r product-methodology .claude/skills/
+cp -r intern-experience .claude/skills/
 ```
 
 ### 自定义
@@ -90,12 +108,13 @@ cp -r product-methodology .claude/skills/
 
 ### Skills
 
-This repo contains four skills in two categories:
+This repo contains five skills in three categories:
 
 | Category | Skills | Scope |
 |----------|--------|-------|
 | Product Methodology | PRINCIPLES / SOP / REVIEW | Universal, applicable to any product |
 | Plan Review | /review-plan | Specifically for overseas product plans |
+| Intern Experience | intern-experience | For PM interns, convert work records into resume entries |
 
 #### Product Methodology — Universal
 
@@ -113,6 +132,21 @@ A complete product methodology system — three docs, each with a clear role, cr
 - **While planning**: Follow the four-step process in `SOP.md`
 - **Before building a demo**: Feed `REVIEW.md` to Claude Code as generation constraints
 - **After building**: Self-review against `REVIEW.md` layer by layer
+
+#### intern-experience — For PM Interns
+
+Converts scattered internship work records (task lists, docs, meeting notes, OKRs) into **resume-ready project descriptions**.
+
+**Core capabilities:**
+- Extracts key facts from messy records (what you did, methods, deliverables, metrics)
+- Organizes by project with structured summaries
+- Outputs STAR format (Situation-Task-Action-Result) resume text
+- Built-in quality check from an interviewer's perspective: impact, professionalism, credibility
+
+**Three use cases:**
+- **Regular accumulation**: Organize every 1-2 weeks so nothing is forgotten
+- **End-of-internship summary**: Batch process all records at once
+- **Interview prep**: Optimize STAR descriptions for target roles
 
 #### /review-plan — Overseas-specific
 
@@ -149,10 +183,12 @@ Copy the skill folder to your Claude Code skills directory:
 # Personal use (all projects)
 cp -r review-plan ~/.claude/skills/
 cp -r product-methodology ~/.claude/skills/
+cp -r intern-experience ~/.claude/skills/
 
 # Project-specific only
 cp -r review-plan .claude/skills/
 cp -r product-methodology .claude/skills/
+cp -r intern-experience .claude/skills/
 ```
 
 ### Customize
