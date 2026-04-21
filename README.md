@@ -6,17 +6,31 @@
 
 ## 中文
 
+### 仓库结构
+
+```
+ai-product-skills/
+├── product-methodology/    # 产品方法论（通用）
+│   ├── PRINCIPLES.md       # 产品原则
+│   ├── SOP.md              # 产品方案 SOP
+│   └── REVIEW.md           # UI/体验 Review 清单
+├── intern-experience/      # 实习经历沉淀（产品经理实习生专用）
+│   ├── cv-skill.md         # 工作记录 → 简历项目经历
+│   └── intern-introduction.md  # 面试口头介绍 + 模拟考核
+└── review-plan-SKILL.md    # 海外版方案审查 skill
+```
+
 ### Skills 列表
 
-本仓库包含五个 skill，分为三类：
+本仓库包含六个 skill，分为三类：
 
 | 类别 | Skills | 适用范围 |
 |------|--------|----------|
 | 产品方法论 | PRINCIPLES / SOP / REVIEW | 通用，适用于任何产品 |
 | 方案审查 | /review-plan | 专门针对海外版产品方案 |
-| 实习经历沉淀 | intern-experience | 产品经理实习生，整理工作记录为简历项目经历 |
+| 实习经历沉淀 | cv-skill / intern-introduction | 产品经理实习生，简历 + 面试准备 |
 
-#### 产品方法论（product-methodology） — 通用
+#### 产品方法论（`product-methodology/`） — 通用
 
 一套完整的产品方法论体系，三个文档各司其职、互相引用，适用于任何产品方向：
 
@@ -33,20 +47,33 @@
 - **做 demo 前**：把 `REVIEW.md` 喂给 Claude Code 当生成约束
 - **做完后**：用 `REVIEW.md` 逐层自检验收
 
-#### intern-experience — 产品经理实习生专用
+#### 实习经历沉淀（`intern-experience/`） — 产品经理实习生专用
 
-将实习期间散落各处的工作记录（飞书待办、方案文档、会议纪要、OKR 等），整理为**可写进简历的项目经历**。
+包含两个互相配合的 skill：
 
-**核心能力：**
+**cv-skill.md — 工作记录 → 简历项目经历**
+
+将实习期间散落各处的工作记录（飞书待办、方案文档、会议纪要、OKR 等），整理为**可直接粘进简历的 bullet points**。
+
 - 从琐碎记录中提取关键事实（做了什么、方法、产出、量化结果）
-- 按项目维度结构化梳理
-- 输出 STAR 格式（Situation-Task-Action-Result）简历文本
+- 按项目维度结构化梳理，提炼 2-3 个最能打的卖点
+- 输出三个版本：一句话版 / 标准版（3-4 行） / 详细版（5-6 行）
+- 中英文双版本
 - 内置面试官视角质量检查：分量感、专业度、结果可信度
 
-**三种使用场景：**
-- **日常积累**：每 1-2 周整理一次，避免最后想不起来做了什么
-- **阶段性整理**：实习结束前，一次性整理所有记录
-- **面试准备**：针对目标岗位优化 STAR 描述
+**intern-introduction.md — 面试口头介绍 + 模拟考核**
+
+基于 cv-skill 输出的项目经历，生成面试时的口头介绍话术和高频考核问答。
+
+- STAR 框架口头介绍（2-3 分钟，Action 占 40-50% 篇幅）
+- 5-8 个模拟考核问题（需求判断、用户理解、方案设计、数据思维等）
+- 每个问题配参考回答（结论先行 + 展开逻辑 + 落地举例）
+- 产品思维检查清单自检
+
+**使用场景：**
+- **日常积累**：每 1-2 周用 cv-skill 整理一次，避免最后想不起来做了什么
+- **阶段性整理**：实习结束前，一次性整理所有记录为简历文本
+- **面试准备**：用 intern-introduction 生成口头话术和模拟问答，针对目标岗位定制
 
 #### /review-plan — 海外版专用
 
@@ -81,19 +108,19 @@
 
 ```bash
 # 个人使用（所有项目通用）
-cp -r review-plan ~/.claude/skills/
 cp -r product-methodology ~/.claude/skills/
 cp -r intern-experience ~/.claude/skills/
+cp -r review-plan-SKILL.md ~/.claude/skills/review-plan/SKILL.md
 
 # 仅限当前项目
-cp -r review-plan .claude/skills/
 cp -r product-methodology .claude/skills/
 cp -r intern-experience .claude/skills/
+cp -r review-plan-SKILL.md .claude/skills/review-plan/SKILL.md
 ```
 
 ### 自定义
 
-`review-plan/SKILL.md` 中有一个"产品背景信息"区域，预留了占位符。填入你自己的产品背景信息，可以获得更有针对性的审查：
+`review-plan-SKILL.md` 中有一个"产品背景信息"区域，预留了占位符。填入你自己的产品背景信息，可以获得更有针对性的审查：
 
 - 产品定位
 - 目标市场和用户画像
@@ -106,17 +133,31 @@ cp -r intern-experience .claude/skills/
 
 ## English
 
+### Repository Structure
+
+```
+ai-product-skills/
+├── product-methodology/    # Product methodology (universal)
+│   ├── PRINCIPLES.md       # Product principles
+│   ├── SOP.md              # Product plan SOP
+│   └── REVIEW.md           # UI/UX review checklist
+├── intern-experience/      # Intern experience (for PM interns)
+│   ├── cv-skill.md         # Work records → resume bullet points
+│   └── intern-introduction.md  # Interview oral intro + mock Q&A
+└── review-plan-SKILL.md    # Overseas plan review skill
+```
+
 ### Skills
 
-This repo contains five skills in three categories:
+This repo contains six skills in three categories:
 
 | Category | Skills | Scope |
 |----------|--------|-------|
 | Product Methodology | PRINCIPLES / SOP / REVIEW | Universal, applicable to any product |
 | Plan Review | /review-plan | Specifically for overseas product plans |
-| Intern Experience | intern-experience | For PM interns, convert work records into resume entries |
+| Intern Experience | cv-skill / intern-introduction | For PM interns, resume + interview prep |
 
-#### Product Methodology — Universal
+#### Product Methodology (`product-methodology/`) — Universal
 
 A complete product methodology system — three docs, each with a clear role, cross-referencing each other. Applicable to any product direction:
 
@@ -133,20 +174,33 @@ A complete product methodology system — three docs, each with a clear role, cr
 - **Before building a demo**: Feed `REVIEW.md` to Claude Code as generation constraints
 - **After building**: Self-review against `REVIEW.md` layer by layer
 
-#### intern-experience — For PM Interns
+#### Intern Experience (`intern-experience/`) — For PM Interns
 
-Converts scattered internship work records (task lists, docs, meeting notes, OKRs) into **resume-ready project descriptions**.
+Two complementary skills:
 
-**Core capabilities:**
+**cv-skill.md — Work Records → Resume Bullet Points**
+
+Converts scattered internship work records (task lists, docs, meeting notes, OKRs) into **resume-ready bullet points**.
+
 - Extracts key facts from messy records (what you did, methods, deliverables, metrics)
-- Organizes by project with structured summaries
-- Outputs STAR format (Situation-Task-Action-Result) resume text
+- Organizes by project, distills 2-3 strongest selling points per project
+- Outputs three versions: one-liner / standard (3-4 bullets) / detailed (5-6 bullets)
+- Chinese + English dual output
 - Built-in quality check from an interviewer's perspective: impact, professionalism, credibility
 
-**Three use cases:**
-- **Regular accumulation**: Organize every 1-2 weeks so nothing is forgotten
-- **End-of-internship summary**: Batch process all records at once
-- **Interview prep**: Optimize STAR descriptions for target roles
+**intern-introduction.md — Interview Oral Intro + Mock Q&A**
+
+Generates interview oral presentation scripts and mock Q&A based on cv-skill output.
+
+- STAR framework oral introduction (2-3 min, Action at 40-50% of content)
+- 5-8 mock interview questions per project (requirements judgment, user understanding, solution design, data thinking, etc.)
+- Reference answers for each question (conclusion first + logic + concrete examples)
+- Product thinking self-check checklist
+
+**Use cases:**
+- **Regular accumulation**: Use cv-skill every 1-2 weeks so nothing is forgotten
+- **End-of-internship summary**: Batch process all records into resume text
+- **Interview prep**: Use intern-introduction to generate oral scripts and mock Q&A, customize for target roles
 
 #### /review-plan — Overseas-specific
 
@@ -181,19 +235,19 @@ Copy the skill folder to your Claude Code skills directory:
 
 ```bash
 # Personal use (all projects)
-cp -r review-plan ~/.claude/skills/
 cp -r product-methodology ~/.claude/skills/
 cp -r intern-experience ~/.claude/skills/
+cp -r review-plan-SKILL.md ~/.claude/skills/review-plan/SKILL.md
 
 # Project-specific only
-cp -r review-plan .claude/skills/
 cp -r product-methodology .claude/skills/
 cp -r intern-experience .claude/skills/
+cp -r review-plan-SKILL.md .claude/skills/review-plan/SKILL.md
 ```
 
 ### Customize
 
-The `review-plan/SKILL.md` file contains a "Product background" section with placeholders. Fill in your own product context for more targeted reviews:
+The `review-plan-SKILL.md` file contains a "Product background" section with placeholders. Fill in your own product context for more targeted reviews:
 
 - Product positioning
 - Target market and user personas
