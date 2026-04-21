@@ -10,14 +10,14 @@
 
 ```
 ai-product-skills/
-├── product-methodology/    # 产品方法论（通用）
-│   ├── PRINCIPLES.md       # 产品原则
-│   ├── SOP.md              # 产品方案 SOP
-│   └── REVIEW.md           # UI/体验 Review 清单
-├── intern-experience/      # 实习经历沉淀（产品经理实习生专用）
-│   ├── cv-skill.md         # 工作记录 → 简历项目经历
-│   └── intern-introduction.md  # 面试口头介绍 + 模拟考核
-└── review-plan-SKILL.md    # 海外版方案审查 skill
+├── product-methodology/        # 产品方法论 + 方案审查
+│   ├── PRINCIPLES.md           # 产品原则（通用）
+│   ├── SOP.md                  # 产品方案 SOP（通用）
+│   ├── REVIEW.md               # UI/体验 Review 清单（通用）
+│   └── review-plan-SKILL.md    # 海外版方案审查 skill
+└── intern-experience/          # 实习经历沉淀（产品经理实习生专用）
+    ├── cv-skill.md             # 工作记录 → 简历项目经历
+    └── intern-introduction.md  # 面试口头介绍 + 模拟考核
 ```
 
 ### Skills 列表
@@ -110,17 +110,15 @@ ai-product-skills/
 # 个人使用（所有项目通用）
 cp -r product-methodology ~/.claude/skills/
 cp -r intern-experience ~/.claude/skills/
-cp -r review-plan-SKILL.md ~/.claude/skills/review-plan/SKILL.md
 
 # 仅限当前项目
 cp -r product-methodology .claude/skills/
 cp -r intern-experience .claude/skills/
-cp -r review-plan-SKILL.md .claude/skills/review-plan/SKILL.md
 ```
 
 ### 自定义
 
-`review-plan-SKILL.md` 中有一个"产品背景信息"区域，预留了占位符。填入你自己的产品背景信息，可以获得更有针对性的审查：
+`product-methodology/review-plan-SKILL.md` 中有一个"产品背景信息"区域，预留了占位符。填入你自己的产品背景信息，可以获得更有针对性的审查：
 
 - 产品定位
 - 目标市场和用户画像
@@ -137,14 +135,14 @@ cp -r review-plan-SKILL.md .claude/skills/review-plan/SKILL.md
 
 ```
 ai-product-skills/
-├── product-methodology/    # Product methodology (universal)
-│   ├── PRINCIPLES.md       # Product principles
-│   ├── SOP.md              # Product plan SOP
-│   └── REVIEW.md           # UI/UX review checklist
-├── intern-experience/      # Intern experience (for PM interns)
-│   ├── cv-skill.md         # Work records → resume bullet points
-│   └── intern-introduction.md  # Interview oral intro + mock Q&A
-└── review-plan-SKILL.md    # Overseas plan review skill
+├── product-methodology/        # Product methodology + plan review
+│   ├── PRINCIPLES.md           # Product principles (universal)
+│   ├── SOP.md                  # Product plan SOP (universal)
+│   ├── REVIEW.md               # UI/UX review checklist (universal)
+│   └── review-plan-SKILL.md    # Overseas plan review skill
+└── intern-experience/          # Intern experience (for PM interns)
+    ├── cv-skill.md             # Work records → resume bullet points
+    └── intern-introduction.md  # Interview oral intro + mock Q&A
 ```
 
 ### Skills
@@ -237,17 +235,15 @@ Copy the skill folder to your Claude Code skills directory:
 # Personal use (all projects)
 cp -r product-methodology ~/.claude/skills/
 cp -r intern-experience ~/.claude/skills/
-cp -r review-plan-SKILL.md ~/.claude/skills/review-plan/SKILL.md
 
 # Project-specific only
 cp -r product-methodology .claude/skills/
 cp -r intern-experience .claude/skills/
-cp -r review-plan-SKILL.md .claude/skills/review-plan/SKILL.md
 ```
 
 ### Customize
 
-The `review-plan-SKILL.md` file contains a "Product background" section with placeholders. Fill in your own product context for more targeted reviews:
+The `product-methodology/review-plan-SKILL.md` file contains a "Product background" section with placeholders. Fill in your own product context for more targeted reviews:
 
 - Product positioning
 - Target market and user personas
